@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="47px" viewBox="0 0 25 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow-right</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-1375.000000, -488.000000)" fill="#FF0000" fill-rule="nonzero">
+            <g id="Slider" transform="translate(0.000000, 208.000000)">
+                <g id="Arrows" transform="translate(40.000000, 280.000000)">
+                    <path d="M1339.31039,23.5109097 L1359.47711,3.0867656 C1360.1743,2.3805773 1360.1743,1.23567057 1359.47711,0.52948227 C1358.77972,-0.17649409 1357.64935,-0.17649409 1356.95206,0.52948227 L1335.52281,22.232268 C1334.82573,22.9384563 1334.82573,24.083363 1335.52281,24.7895513 L1356.95206,46.4923371 C1357.66149,47.1862328 1358.79196,47.1663103 1359.47711,46.4478294 C1360.14542,45.7469396 1360.14542,44.6358376 1359.47711,43.9350538 L1339.31039,23.5109097 Z" id="arrow-right" transform="translate(1347.500000, 23.500000) rotate(-180.000000) translate(-1347.500000, -23.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

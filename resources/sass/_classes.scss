@@ -1,0 +1,132 @@
+.section{
+	@media(min-width: 768px){
+		padding:60px 0;
+	}
+	padding: 30px 0;
+
+	&.section-top-none{
+		@media(min-width: 768px){
+			padding: 0 0 60px;
+		}
+		padding: 0 0 30px;
+	}
+}
+
+//////////////////// margin
+.no-margin {margin:0}
+.mtxs {margin-top:5px}
+.mtsm {margin-top:10px}
+.mtmd {margin-top:15px}
+.mtlg {margin-top:20px}
+.mtxlg {margin-top:25px}
+.mtxxlg {margin-top:30px}
+
+.mbxs {margin-bottom:5px}
+.mbsm {margin-bottom:10px}
+.mbmd {margin-bottom:15px}
+.mblg {margin-bottom:20px}
+.mbxlg {margin-bottom:25px}
+.mbxxlg {margin-bottom:30px}
+
+.mrxs {margin-right:5px}
+.mrsm {margin-right:10px}
+.mrmd {margin-right:15px}
+.mrlg {margin-right:20px}
+.mrxlg {margin-right:25px}
+.mrxxlg {margin-right:30px}
+
+.mlxs {margin-left:5px}
+.mlsm {margin-left:10px}
+.mlmd {margin-left:15px}
+.mllg {margin-left:20px}
+.mlxlg {margin-left:25px}
+.mlxxlg {margin-left:30px}
+
+
+//////////////////// padding
+.no-padding {padding:0}
+.ptsm {padding-top:10px}
+.ptmd {padding-top:15px}
+.ptlg {padding-top:20px}
+.ptxlg {padding-top:25px}
+.ptxxlg {padding-top:30px}
+
+.pbxs {padding-bottom:5px}
+.pbsm {padding-bottom:10px}
+.pbmd {padding-bottom:15px}
+.pblg {padding-bottom:20px}
+.pbxlg {padding-bottom:25px}
+.pbxxlg {padding-bottom:30px}
+
+.prxs {padding-right:5px}
+.prsm {padding-right:10px}
+.prmd {padding-right:15px}
+.prlg {padding-right:20px}
+.prxlg {padding-right:25px}
+.prxxlg {padding-right:30px}
+
+.plxs {padding-left:5px}
+.plsm {padding-left:10px}
+.plmd {padding-left:15px}
+.pllg {padding-left:20px}
+.plxlg {padding-left:25px}
+.plxxlg {padding-left:30px}
+
+////////////////// bg
+.bg-white { background-color:#FFFFFF}
+.bg-lightGrey{background-color: $borderColor}
+.bg-primaryColor{background-color: $primaryColor}
+.bg-grey{background-color:$bg-gray}
+.bg-brand{background: $brandColor}
+///// adn so on here ...
+
+///////// color
+.text-darkgray {color:$textColor}
+.text-primaryColor{color:$primaryColor}
+.text-grayColor{color:$textColor}
+.text-white{color:white}
+.text-brand{color:$brandColor}
+/// and so on here ....
+
+
+//////////////// border
+.bb {border-bottom:1px solid $borderColor}
+.bt {border-top:1px solid $borderColor}
+.bl {border-left:1px solid $borderColor}
+.br {border-right:1px solid $borderColor}
+.ball {border-bottom:1px solid $borderColor}
+
+//////////////////// text
+.text-regular {font-weight:500}
+.text-semibold {font-weight:600}
+.text-bold {font-weight:800}
+.text-lg {font-size:16px}
+.text-xlg {font-size:18px}
+.text-md {font-size:14px}
+.text-link{color: $brandColor;}
+
+////////////////	 flex
+.flex { @media(min-width: 768px){ flex-direction:row; } display:flex; width:100%; flex-direction:column}
+.flex-wrap {flex-wrap: wrap}
+.flex-nowrap {flex-wrap: nowrap}
+.flex-center {@media(min-width: 768px){align-items: center} }
+
+///////////////////// position
+.abs {position:absolute}
+.posb5 {bottom:5px}
+.posb {bottom:0}
+.posr {right:0}
+.nin{bottom: initial !important}
+
+.width100{width: 100%}
+
+.mob-off{
+	@include mqx(m){
+		display: none;
+	}
+}
+.mob-on{
+	@include mqx(m){
+		display: block;
+	}
+}

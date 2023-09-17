@@ -1,0 +1,521 @@
+html {
+    font-family: $primaryFont;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px/1.42857143 $primaryFont;
+
+    @include mqx(l){
+        padding-top: 73px;
+    }
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+textarea{
+    resize: none;
+}
+a {
+    color: $primaryColor;
+    text-decoration: none;
+    @include trans(.2s);
+    outline: none;
+    cursor: pointer;
+}
+
+a:hover,
+a:focus {
+    color: darken($primaryColor, 10%);
+    text-decoration: none;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+p {
+    text-align: left;
+    font: 16px/1.6 $primaryFont;
+    color: $textColor;
+}
+
+.btn {
+    padding: 15px 40px;
+    text-align: center;
+    background: $brandColor;
+    color: #fff;
+    font: 600 16px/1.2 $primaryFont;
+    @include trans(.2s);
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+
+    &:hover, &:focus {
+        background: none;
+        outline: 0;
+        color: #fff;
+        background: lighten($brandColor, 15%);
+        @include trans(.2s);
+        box-shadow: none;
+    }
+    @media (max-width: $laptop) {
+        font-size: 14px;
+        padding: 15px 25px;
+    }
+    &.btn-alt{
+        background: $primaryColor;
+
+        &:hover, &:focus {
+            background: lighten($primaryColor, 15%);
+        }
+    }
+    &.btn-gray{
+        background: #ACACAC;
+
+        &:hover, &:focus {
+            background: darken(#ACACAC, 15%);
+        }
+    }
+}
+
+.main-title {
+    font: 39px/1 $primaryFont;
+    font-weight: 800;
+    color: $primaryColor;
+
+    @media (max-width: $tablet) {
+        font-size: 25px;
+    }
+
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font: 14px/1 $primaryFont;
+    outline: 0;
+}
+
+select.input-field {
+    padding: 5px 20px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.vcenter {
+    @include flex_align_items(center);
+    @include flex_justify_content(flex-start);
+    @include display_flex();
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
+}
+
+label {
+    color: $primaryColor;
+    font: 500 16px/1.2 $primaryFont;
+    margin-bottom: 0;
+}
+
+input[type="submit"] {
+    background: $primaryColor;
+    width: 205px;
+    height: auto !important;
+    margin: 0 auto;
+    color: #fff;
+    @include trans(.2s);
+
+    &:hover {
+        background: darken($primaryColor, 10%);
+    }
+}
+.form-control{
+    height: calc(1.5em + .75rem + 16px);
+    outline: 0;
+    border-radius: 0;
+    border: 1px solid #e7e7e7;
+    padding: 10px 15px;
+
+    &:focus{
+        outline: 0;
+        box-shadow: none;
+        border-color: $primaryColor;
+    }
+}
+.parsley-required, .parsley-equalto {
+    color: #a94442;
+    padding: 10px;
+    font: 13px/1 $primaryFont;
+}
+.cover{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.t-line{
+    position: relative;
+    background: $brandColor;
+    width: 40px;
+    height: 10px;
+    margin-left: -13px;
+}
+button:focus{
+    outline: 0;
+}
+.dropdown-menu{
+    border-radius: 0;
+    font-size: 15px;
+    overflow: hidden;
+
+    .col-3,
+    > .dropdown-item{
+        animation-name: fadeInUp;
+        animation-duration: .4s;
+        animation-fill-mode: both;
+
+        @for $i from 1 to 20 {
+            &:nth-child(#{$i}) { animation-delay: $i * 0.1s}
+        }
+    }
+    > .dropdown-item {
+        animation-name: fadeInUpMenu;
+    }
+    .dropdown-item{
+        padding: 0.4rem 1.6rem;
+    }
+}
+@media (max-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes fadeInUpMenu {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes fadeInDownSearch {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+.radio-custom {
+    @include cfx;
+    display: inline-block;
+
+    .form-radio {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: inline-block;
+        position: relative;
+        background-color: transparent;
+        color: $black;
+        top: 10px;
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+        margin-right: 10px;
+        outline: none;
+        border-radius: 50%;
+        padding: 1px;
+        border: 1px solid $black;
+
+        &:focus {
+            outline: none;
+        }
+        &:hover,
+        &:checked {
+            background-color: #8b8b8f;
+            border: 2.5px solid #8b8b8f;
+        }
+    }
+    label{
+        margin-top: 10px;
+        font-weight: 600;
+    }
+}
+.checkbox-custom {
+    @include cfx;
+    position: relative;
+
+    .form-checkbox {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: inline-block;
+        position: relative;
+        background-color: transparent;
+        color: #666;
+        top: 3px;
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+        margin-right: 10px;
+        outline: none;
+        border-radius: 0;
+        border: 1px solid #8b8b8f;
+
+        &:focus {
+            outline: none;
+        }
+        &:hover,
+        &:checked {
+            background-color: $brandColor;
+            border: 2.5px solid $brandColor;
+        }
+        &:checked + label:after{
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 12px;
+            background: #fff;
+            width: 2px;
+            height: 2px;
+            -webkit-box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff, 4px -6px 0 #fff, 4px -8px 0 #fff;
+            box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff, 4px -6px 0 #fff, 4px -8px 0 #fff;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+    label{
+        color: $primaryColor;
+        font: 500 18px/1 $primaryFont;
+    }
+}
+.select-custom{
+    background: #F2F2F2;
+    border: 1px solid #e7e7e7;
+    position: relative;
+    margin-bottom: 1rem;
+
+    &:after{
+        content: "\f078";
+        font-family: "Font Awesome 5 Free";
+        font-size: 16px;
+        font-weight: 600;
+        position: absolute;
+        z-index: 2;
+        top: 15px;
+        right: 15px;
+        pointer-events: none;
+        color: $brandColor;
+    }
+    select{
+        -webkit-appearance: none;
+        appearance: none;
+        border: none;
+        padding: 10px 15px;
+        width: 100%;
+        height: calc(1.5em + .75rem + 14px);
+
+        option[value=""][disabled] {
+            display: none;
+        }
+
+        &:focus{
+            outline: 1px solid $primaryColor;
+            border-radius: 0;
+        }
+    }
+}
+//.collapse:not(.show){
+//    display: block;
+//}
+.custom-radio{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    color: $black;
+    top: 7px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    outline: none;
+    border-radius: 50%;
+    padding: 1px;
+    border: 1px solid #979797;
+
+    &:focus {
+        outline: none;
+    }
+    &:hover,
+    &:checked {
+        background-color: $brandColor;
+        border: 2.5px solid $brandColor;
+    }
+}
+
+.modal-dialog{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+
+    .modal-content{
+        border-radius: 0;
+        padding: 40px 35px;
+        margin-bottom: 50px;
+    }
+    .close{
+        position: absolute;
+        top: 25px;
+        right: 30px;
+    }
+    .modal-header{
+        border-bottom: 0;
+
+        .modal-title{
+            font-size: 27px;
+        }
+        .model-desc{
+            font-size: 16px;
+        }
+    }
+    .modal-body{
+
+    }
+    .modal-footer{
+        border-top: 0;
+
+        > * {
+            margin: 0;
+        }
+    }
+    .checkbox-custom{
+        .form-checkbox{
+            width: 15px;
+            height: 15px;
+            margin-right: 6px;
+        }
+        label{
+            font-size: 14px;
+            font-weight: normal;
+        }
+    }
+    .forget-password{
+        font-size: 14px;
+    }
+    .social-login{
+        .btn{
+            width: 70px;
+            padding: 15px;
+
+            &.facebook{
+                background: #3a5793;
+
+                @include hoverFoucs{
+                    background: lighten(#3a5793, 10%);
+                }
+            }
+            &.google{
+                background: #c54938;
+
+                @include hoverFoucs{
+                    background: lighten(#c54938, 10%);
+                }
+            }
+        }
+    }
+}
+.br-theme-fontawesome-stars .br-widget a{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+}
+.pagination{
+    margin-top: 30px;
+
+    .page-item{
+        .page-link{
+            border-radius: 0;
+            color: $primaryColor;
+
+            @include hoverFoucs{
+                background-color: $brandColor;
+                border-color: $brandColor;
+                color: #fff;
+            }
+        }
+        &.disabled{
+            .page-link{
+                color: #6c757d;
+            }
+        }
+        &.active{
+            .page-link {
+                background-color: $brandColor;
+                border-color: $brandColor;
+                color: #fff;
+            }
+        }
+    }
+}
