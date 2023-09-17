@@ -41,8 +41,8 @@
                                     <img src="{{ optional($record->getFirstMedia('profile'))->getUrl() }}" class="playerimg">
                                 </div>
                                 <div class="copy">
-                                    <p>أمين السر</p>
-                                    <h4>ثامر الشنفا</h4>
+                                    <p>أمين السر العام</p>
+                                    <h4>ثـــامــــر الشــنـــفـــــا</h4>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +124,7 @@
         .copy p {
             position: absolute;
             top: -52px;
-            left: 81px;
+            left: 75px;
             font-weight: bold;
             font-size: 23px!important;
             color: #000000;
